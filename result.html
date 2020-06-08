@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Finder</title>
+    <script>
+        function goBack() {
+          window.history.back()
+        }
+    </script>
+    <style>
+        body {background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2fb2821a-1406-4a1d-9b04-6668f278e944/d86i02s-5d7bc1ed-0c4f-4171-b48f-1dd1072ea7eb.png/v1/fill/w_583,h_350,q_70,strp/pokemon_x_and_y_battle_background_18_by_phoenixoflight92_d86i02s-350t.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDgwIiwicGF0aCI6IlwvZlwvMmZiMjgyMWEtMTQwNi00YTFkLTliMDQtNjY2OGYyNzhlOTQ0XC9kODZpMDJzLTVkN2JjMWVkLTBjNGYtNDE3MS1iNDhmLTFkZDEwNzJlYTdlYi5wbmciLCJ3aWR0aCI6Ijw9ODAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.3uHs6AeGlrquW2J5VW-e4D37t_d4mLbKZcGdEqW8Xx8') ;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        background-position-x: center;
+        margin-top: 100px;}
+        
+        .name {background-color: wheat;
+        opacity: 0.9;
+        border-radius: 20px;
+        font-size: 32px;
+        font-weight: 800;
+        font-family: Helvetica;
+        max-width: 400px;
+        text-align: center;
+        margin:auto;}
+        
+        .img {margin-left: auto; margin-right: auto; width: 22%; display: block;}
+
+        .table table, tr, td {border: solid #000; margin-right: auto; margin-left: auto;}
+
+        .table tr, td {padding: 5px;width: 100px; text-align: center;position: relative;}
+
+        td {font-size: 16px; font-weight: bold;}
+
+        .but {
+        background-color:wheat; 
+        border-radius: 10px;
+        opacity: 0.9;
+        padding: 10px;
+        border: 1px solid white; 
+        color: black; 
+        font-weight: 600; 
+        font-size: 16px;
+        text-align: center; 
+        max-width: 400px;
+        position: absolute;
+        top: 520px;
+        left:590px;}
+
+        .but:hover {background-color: #a5a6a7}
+
+        .but:active {
+        background-color: #a5a6a7;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);}
+
+        .cr {font-size: 14px;
+        font-weight: 650;
+        position: absolute;
+        bottom: 10px}
+    </style>
+</head>
+<body>
+    <!-- <img id='logo' src="https://pluspng.com/img-png/pokemon-logo-png-pokemon-logo-png-2000.png"> -->
+    <h1 class="name"> #{{ data['id'] }} {{ data['name'] }}</h1>
+    <img class='img' src="{{ data['img'] }}" >
+    <div class ='table'>
+        <table >
+            <tr>
+            <td> Weight 
+                <td> {{ data['weight'] }} </td>
+            </td>
+            </tr>
+            <tr>
+            <td> Height 
+                <td> {{ data['height'] }} </td>
+            </td>
+            </tr>
+        </table>
+    </div>
+    <button class='but' onclick="goBack()">Go Back</button>
+    <span class='cr'>Pokemon Finder &copy; 2020 Jordy Yusim </span>
+    
+</body>
+</html>
